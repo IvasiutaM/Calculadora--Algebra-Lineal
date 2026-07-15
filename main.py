@@ -1,8 +1,10 @@
+from gui.app import App
+
 def main():
-    print("===================================")
-    print(" Calculadora de Álgebra Lineal")
-    print("===================================")
-    print("Proyecto iniciado correctamente.")
+
+    app = App() # crea la instancia de la clase App
+
+    app.mainloop() # inicia el bucle principal de la interfaz grafica
 
 
 if __name__ == "__main__":
