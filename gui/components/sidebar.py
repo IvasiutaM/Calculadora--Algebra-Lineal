@@ -34,8 +34,7 @@ class Sidebar(ctk.CTkFrame):
                 width=200,
                 height=40
             )
-        
-        button.pack( 
+            button.pack( 
             padx=20,
             pady=6
-        )
+            )
