@@ -1,19 +1,20 @@
 import customtkinter as ctk
 
+from gui.pages.home_page import HomePage
+
 class ContentFrame(ctk.CTkFrame):
 
     def __init__(self, master):
         super().__init__(master)
 
+        # Permite que la página ocupe todo el espacio disponible
+        self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(0, weight=1)
 
-        label = ctk.CTkLabel(
-            self,
-            text=(
-                "Bienvenido a la calculadora de álgebra lineal\n\n"
-                "Seleccione una opción en el menú lateral para comenzar."
-            ),
-            font=("Segoe UI", 22)
+        # Página inicial
+        self.current_page = HomePage(self)
+        self.current_page.grid(
+            row=0,
+            column=0,
+            sticky="nsew"
         )
-
-        label.pack(expand=True)
