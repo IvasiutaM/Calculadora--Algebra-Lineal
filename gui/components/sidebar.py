@@ -2,8 +2,9 @@ import customtkinter as ctk
 
 class Sidebar(ctk.CTkFrame):
 
-    def __init__(self, master):
+    def __init__(self, master, on_module_selected):
         super().__init__(master, width=250, corner_radius=0)
+        self.on_module_selected = on_module_selected 
 
         self.grid_propagate(False)
 
@@ -32,7 +33,8 @@ class Sidebar(ctk.CTkFrame):
                 self,
                 text=module,
                 width=200,
-                height=40
+                height=40,
+                command=lambda m=module: self.on_module_selected(m)
             )
             button.pack( 
             padx=20,
