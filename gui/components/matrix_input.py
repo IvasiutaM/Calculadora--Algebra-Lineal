@@ -9,3 +9,15 @@ class MatrixInput(ctk.CTkFrame):
         self.columns = columns
 
         self.entries = []
+
+        self._create_grid()
+    
+    def _create_grid(self): # Crea la grilla de entrada de la matriz
+        
+        for row in range(self.rows):
+            current_row = []
+
+            for column in range(self.columns):
+                pass
+        
+        self.entries.append(current_row)
