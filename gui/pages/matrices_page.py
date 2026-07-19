@@ -1,4 +1,5 @@
 import customtkinter as ctk
+from matplotlib.pylab import matrix
 
 from gui.components.matrix_input import MatrixInput
 
@@ -30,3 +31,16 @@ class MatricesPage(ctk.CTkFrame):
             )
         
         self.matrix_input.pack(pady=20)
+
+        self.read_button = ctk.CTkButton(
+            self,
+            text="Leer matriz",
+            command=self.read_matrix
+        )
+
+        self.read_button.pack(pady=10)
+    
+    def read_matrix(self):
+        matrix = self.matrix_input.get_matrix()
+
+        print(matrix)
