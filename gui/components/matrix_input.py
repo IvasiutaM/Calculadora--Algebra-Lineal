@@ -18,6 +18,19 @@ class MatrixInput(ctk.CTkFrame):
             current_row = []
 
             for column in range(self.columns):
-                pass
+                entry = ctk.CTkEntry(
+                    self,
+                    width=60,
+                    justify="center"
+                )
+
+                entry.grid(
+                    row=row,
+                    column=column,
+                    padx=5,
+                    pady=5
+                )
+
+                current_row.append(entry)
         
         self.entries.append(current_row)
