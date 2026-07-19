@@ -45,4 +45,4 @@ class App(ctk.CTk):
         )
     
     def on_module_selected(self, module):
-        print(f"Módulo seleccionado: {module}")
+        self.content.show_page(module)
