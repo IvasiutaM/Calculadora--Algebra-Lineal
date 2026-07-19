@@ -23,7 +23,10 @@ class App(ctk.CTk):
 
         self.grid_rowconfigure(0, weight=1)
 
-        self.sidebar = Sidebar(self)
+        self.sidebar = Sidebar(
+            self,
+            self.on_module_selected
+        )
 
         self.sidebar.grid(
             row=0,
@@ -40,3 +43,6 @@ class App(ctk.CTk):
             padx=20,
             pady=20
         )
+    
+    def on_module_selected(self, module):
+        print(f"Módulo seleccionado: {module}")
