@@ -2,7 +2,7 @@ import customtkinter as ctk
 
 from gui.pages.home_page import HomePage
 
-from gui.pages.matrices_page import MatriccesPage
+from gui.pages.matrices_page import MatricesPage
 
 class ContentFrame(ctk.CTkFrame):
 
