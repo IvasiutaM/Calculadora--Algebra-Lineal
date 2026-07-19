@@ -16,7 +16,7 @@ class MatricesPage(ctk.CTkFrame):
 
         descripcion = ctk.CTkLabel(
             self,
-            text="Aquí construiremos todas las operaciones con matrices.",
+            text="Bienvenido a la sección de matrices.",
             font=("Segoe UI", 18)
         )
 
