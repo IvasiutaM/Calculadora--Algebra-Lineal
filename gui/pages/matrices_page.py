@@ -1,5 +1,6 @@
 import customtkinter as ctk
 
+from gui.components.matrix_input import MatrixInput
 
 class MatricesPage(ctk.CTkFrame):
 
@@ -21,3 +22,11 @@ class MatricesPage(ctk.CTkFrame):
         )
 
         descripcion.pack()
+
+        self.matrix_input = MatrixInput(
+            self, 
+            rows=3, 
+            columns=3
+            )
+        
+        self.matrix_input.pack(pady=20)
