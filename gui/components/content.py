@@ -4,6 +4,11 @@ from gui.pages.home_page import HomePage
 
 from gui.pages.matrices_page import MatricesPage
 
+# Definición del diccionario de páginas. Cada clave es el nombre del módulo y el valor es la clase correspondiente a la página.
+PAGES = {
+    "Matrices": MatricesPage,
+}
+
 class ContentFrame(ctk.CTkFrame):
 
     def __init__(self, master):
@@ -26,11 +31,9 @@ class ContentFrame(ctk.CTkFrame):
             # Elimina la página actual
             self.current_page.destroy()
 
-            # Selecciona la nueva página
-            if page_name == "Matrices":
-                self.current_page = MatricesPage(self)
-            else:
-                self.current_page = HomePage(self)
+            page_class = PAGES.get(page_name, HomePage) # Get busca la clave en el diccionario y devuelve el valor correspondiente. Si no encuentra la clave, devuelve HomePage como valor predeterminado.
+
+            self.current_page = page_class(self) 
 
             # Muestra la página
             self.current_page.grid(
