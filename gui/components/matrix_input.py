@@ -33,7 +33,7 @@ class MatrixInput(ctk.CTkFrame):
 
                 current_row.append(entry)
         
-        self.entries.append(current_row)
+            self.entries.append(current_row)
     
     def get_matrix(self): # Obtiene la matriz ingresada por el usuario
         matrix = []
