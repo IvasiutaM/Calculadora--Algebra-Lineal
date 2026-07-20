@@ -24,6 +24,14 @@ class MatricesPage(ctk.CTkFrame):
 
         descripcion.pack()
 
+        self.controls_frame = ctk.CTkFrame(self)
+
+        self.controls_frame.pack(
+            pady=20,
+            padx=20,
+            fill="x"
+        )
+
         self.matrix_input = MatrixInput(
             self, 
             rows=3, 
