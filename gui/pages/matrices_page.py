@@ -101,22 +101,21 @@ class MatricesPage(ctk.CTkFrame):
         )
 
         rows_label.grid(
-            row=0,
+            row=1,
             column=0,
             padx=(0,20),
             pady=5,
             sticky="w"
         )
 
-        self.columns_combobox = ctk.CTkComboBox(
+        self.rows_combobox = ctk.CTkComboBox(
             form_frame,
             values=["2", "3", "4", "5", "6"]
         )
 
         self.rows_combobox.grid(
-            row=0,
+            row=1,
             column=1,
-            padx=(0,20),
             pady=5
         )
 
