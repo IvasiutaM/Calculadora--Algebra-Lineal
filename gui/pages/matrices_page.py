@@ -10,6 +10,7 @@ class MatricesPage(ctk.CTkFrame):
 
         self._create_header()
         self._create_layout()
+        self._create_controls()
 
     def _create_header(self): # Crea el encabezado de la página
         titulo = ctk.CTkLabel(
@@ -69,3 +70,49 @@ class MatricesPage(ctk.CTkFrame):
             padx=20,
             pady=(10,20)
         )
+    
+    def _create_controls(self): # Crea los controles de configuración
+        section_title = ctk.CTkLabel(
+            self.controls_frame,
+            text="Configuración",
+            font=("Segoe UI", 18, "bold")
+        )
+
+        section_title.pack(
+            anchor="w",
+            padx=15,
+            pady=(15,10)
+        )
+
+        form_frame = ctk.CTkFrame(
+            self.controls_frame,
+            fg_color="transparent"
+        )
+
+        form_frame.pack(
+            padx=15,
+            pady=(0,15),
+            anchor="w"
+        )
+
+        rows_label = ctk.CTkLabel(
+            form_frame,
+            text="Filas:"
+        )
+
+        rows_label.grid(
+            row=0,
+            column=0,
+            padx=(0,20),
+            pady=5,
+            sticky="w"
+        )
+
+        self.rows_combobox.grid(
+            row=0,
+            column=1,
+            padx=(0,20),
+            pady=5
+        )
+
+        self.rows_combobox.set("3")
