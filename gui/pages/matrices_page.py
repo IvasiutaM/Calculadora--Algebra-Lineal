@@ -32,23 +32,38 @@ class MatricesPage(ctk.CTkFrame):
             fill="x"
         )
 
-        self.matrix_input = MatrixInput(
-            self, 
-            rows=3, 
-            columns=3
-            )
-        
-        self.matrix_input.pack(pady=20)
+        self.matrix_area = ctk.CTkFrame(self)
 
-        self.read_button = ctk.CTkButton(
-            self,
-            text="Leer matriz",
-            command=self.read_matrix
+        self.matrix_area.pack(
+            fill="both",
+            expand=True,
+            padx=20,
+            pady=10
         )
 
-        self.read_button.pack(pady=10)
-    
-    def read_matrix(self):
-        matrix = self.matrix_input.get_matrix()
+        self.operations_frame = ctk.CTkFrame(self)
 
-        print(matrix)
+        self.operations_frame.pack(
+            fill="x",
+            padx=20,
+            pady=10
+        )
+
+        self.result_frame = ctk.CTkFrame(self)
+
+        self.result_frame.pack(
+            fill="x",
+            padx=20,
+            pady=10
+        )
+
+        self.procedure_frame = ctk.CTkFrame(self)
+
+        self.procedure_frame.pack(
+            fill="both",
+            expand=True,
+            padx=20,
+            pady=(10,20)
+        )
+
+        
