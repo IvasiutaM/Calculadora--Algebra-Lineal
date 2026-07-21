@@ -108,6 +108,11 @@ class MatricesPage(ctk.CTkFrame):
             sticky="w"
         )
 
+        self.columns_combobox = ctk.CTkComboBox(
+            form_frame,
+            values=["2", "3", "4", "5", "6"]
+        )
+
         self.rows_combobox.grid(
             row=0,
             column=1,
