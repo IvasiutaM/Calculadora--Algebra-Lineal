@@ -8,22 +8,27 @@ class MatricesPage(ctk.CTkFrame):
     def __init__(self, master):
         super().__init__(master)
 
+        self._create_header()
+        self._create_layout()
+
+    def _create_header(self): # Crea el encabezado de la página
         titulo = ctk.CTkLabel(
             self,
             text="Matrices",
-            font=("Segoe UI", 28, "bold")
+            font=("Segoe UI", 24, "bold")
         )
 
-        titulo.pack(pady=40)
+        titulo.pack(pady=(20,5))
 
         descripcion = ctk.CTkLabel(
             self,
-            text="Bienvenido a la sección de matrices.",
-            font=("Segoe UI", 18)
+            text="Realiza operaciones entre matrices y visualiza el procedimiento paso a paso.",
+            justify="center"
         )
 
-        descripcion.pack()
-
+        descripcion.pack(pady=(0,20))
+    
+    def _create_layout(self): # Crea la estructura de la página
         self.controls_frame = ctk.CTkFrame(self)
 
         self.controls_frame.pack(
@@ -36,7 +41,6 @@ class MatricesPage(ctk.CTkFrame):
 
         self.matrix_area.pack(
             fill="both",
-            expand=True,
             padx=20,
             pady=10
         )
@@ -65,5 +69,3 @@ class MatricesPage(ctk.CTkFrame):
             padx=20,
             pady=(10,20)
         )
-
-        
